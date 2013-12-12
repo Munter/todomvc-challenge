@@ -112,6 +112,11 @@ article header p a {
     margin-left: 20px;
 }
 
+article p.description {
+    font-style: italic;
+    color: #999;
+}
+
 body > footer p {
     font-size: 0.6em;
     line-height: 0.6em;
