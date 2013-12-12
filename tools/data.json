@@ -1,0 +1,386 @@
+[
+  [
+    {
+      "path": "architecture-examples/backbone",
+      "name": "Backbone.js",
+      "description": "Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.",
+      "source": "http://documentcloud.github.com/backbone"
+    },
+    {
+      "path": "architecture-examples/angularjs",
+      "name": "AngularJS",
+      "description": "What HTML would have been had it been designed for web apps",
+      "source": "http://angularjs.org"
+    },
+    {
+      "path": "architecture-examples/emberjs",
+      "name": "Ember.js",
+      "description": "Ember is a JavaScript framework for creating ambitious web applications that eliminates boilerplate and provides a standard application architecture.",
+      "source": "http://emberjs.com"
+    },
+    {
+      "path": "architecture-examples/knockoutjs",
+      "name": "KnockoutJS",
+      "description": "Simplify dynamic JavaScript UIs by applying the Model-View-View Model (MVVM) pattern",
+      "source": "http://knockoutjs.com"
+    },
+    {
+      "path": "architecture-examples/dojo",
+      "name": "Dojo",
+      "description": "Dojo saves you time and scales with your development process, using web standards as its platform. It’s the toolkit experienced developers turn to for building high quality desktop and mobile web applications.",
+      "source": "http://dojotoolkit.org"
+    },
+    {
+      "path": "architecture-examples/yui",
+      "name": "YUI",
+      "description": "YUI's lightweight core and modular architecture make it scalable, fast, and robust. Built by frontend engineers at Yahoo!, YUI powers the most popular websites in the world.",
+      "source": "http://yuilibrary.com"
+    },
+    {
+      "path": "architecture-examples/agilityjs",
+      "name": "Agility.js",
+      "description": "Agility.js is an MVC library for Javascript that lets you write maintainable and reusable browser code without the infrastructural overhead found in other MVC libraries. The goal is to enable developers to write web apps at least as quickly as with jQuery, while simplifying long-term maintainability through MVC objects.",
+      "source": "http://agilityjs.com"
+    },
+    {
+      "path": "architecture-examples/knockback",
+      "name": "Knockback.js",
+      "description": "Knockback.js provides Knockout.js magic for Backbone.js Models and Collections.",
+      "source": "http://kmalakoff.github.com/knockback"
+    },
+    {
+      "path": "architecture-examples/canjs",
+      "name": "CanJS",
+      "description": "CanJS with jQuery. CanJS is a client-side, JavaScript framework that makes building rich web applications easy. It provides can.Model (for connecting to RESTful JSON interfaces), can.View (for template loading and caching), can.Observe (for key-value binding), can.EJS (live binding templates), can.Control (declarative event bindings) and can.route (routing support).",
+      "source": "http://canjs.us"
+    },
+    {
+      "path": "architecture-examples/maria",
+      "name": "Maria",
+      "description": "An MVC framework for JavaScript applications. The real MVC. The Smalltalk MVC. The Gang of Four MVC. The three core design patterns of MVC (observer, composite, and strategy) are embedded in Maria's Model, View, and Controller objects. Other patterns traditionally included in MVC implementations (e.g. factory method and template) make appearances too.",
+      "source": "https://github.com/petermichaux/maria"
+    },
+    {
+      "path": "architecture-examples/polymer/index.html",
+      "name": "Polymer",
+      "description": "Polymer is a new type of library for the web, built on top of Web Components, and designed to leverage the evolving web platform on modern browsers. It is comprised of core platform features (e.g Shadow DOM, Custom Elements, MDV) enabled with polyfills and a next generation web application framework built on these technologies.",
+      "source": "http://polymer-project.org"
+    },
+    {
+      "path": "labs/architecture-examples/cujo/index.html",
+      "name": "cujoJS",
+      "description": "cujoJS is an architectural framework for building highly modular, scalable, maintainable applications in Javascript.  It provides architectural plumbing, such as modules (AMD and CommonJS), declarative application composition, declarative connections, and aspect oriented programming.",
+      "source": "http://cujojs.com"
+    },
+    {
+      "path": "labs/architecture-examples/dermis",
+      "name": "dermis",
+      "description": "dermis is a tiny framework that provides models, collections, controllers, and data-binding out of the box. dermis is designed to be the simplest possible solution for creating complex applications",
+      "source": "https://github.com/wearefractal/dermis"
+    },
+    {
+      "path": "labs/architecture-examples/montage",
+      "name": "Montage",
+      "description": "Montage simplifies the development of rich HTML5 applications by providing modular components, real-time two-way data binding, CommonJS dependency management, and many more conveniences.",
+      "source": "http://montagejs.org"
+    },
+    {
+      "path": "labs/architecture-examples/extjs",
+      "name": "Ext.js",
+      "description": "Ext JS 4 is the next major advancement in our JavaScript framework. Featuring expanded functionality, plugin-free charting, and a new MVC architecture it's the best Ext JS yet. Create incredible web apps for every browser.",
+      "source": "http://www.sencha.com/products/extjs"
+    },
+    {
+      "path": "labs/architecture-examples/sammyjs",
+      "name": "Sammy.js",
+      "description": "Sammy.js is a tiny JavaScript framework developed to ease the pain and provide a basic structure for developing JavaScript applications.",
+      "source": "http://sammyjs.org"
+    },
+    {
+      "path": "labs/architecture-examples/stapes",
+      "name": "Stapes",
+      "description": "Stapes is a (really) tiny Javascript MVC micro-framework (1.7kb) that has all the building blocks you need when writing an MVC app. It includes a powerful event system, support for inheritance, use with AMD, plugin support and more. A RequireJS Todo application is <a href='labs/dependency-examples/stapes_require/index.html'>also</a> available.",
+      "source": "http://hay.github.com/stapes"
+    },
+    {
+      "path": "labs/architecture-examples/epitome",
+      "name": "Epitome",
+      "description": "Epitome is a new extensible and modular open-source MVP* framework, built out of MooTools Classes and Events.",
+      "source": "http://dimitarchristoff.github.com/Epitome"
+    },
+    {
+      "path": "labs/architecture-examples/somajs",
+      "name": "soma.js",
+      "description": "soma.js is a framework created to build scalable and maintainable javascript applications.",
+      "source": "http://somajs.github.com/somajs"
+    },
+    {
+      "path": "labs/architecture-examples/duel/www",
+      "name": "DUEL",
+      "description": "DUEL is a dual-side templating engine using HTML for layout and 100% pure JavaScript as the binding language. The same views may be executed both directly in the browser (client-side template) and on the server (server-side template).",
+      "source": "https://bitbucket.org/mckamey/duel/wiki/Home"
+    },
+    {
+      "path": "labs/architecture-examples/kendo",
+      "name": "Kendo UI",
+      "description": "Kendo UI is a comprehensive HTML5, JavaScript framework for modern web and mobile app development",
+      "source": "http://www.kendoui.com"
+    },
+    {
+      "path": "labs/architecture-examples/puremvc",
+      "name": "PureMVC",
+      "description": "PureMVC is a lightweight framework for creating applications based upon the classic Model-View-Controller design meta-pattern.",
+      "source": "http://puremvc.github.com"
+    },
+    {
+      "path": "labs/architecture-examples/olives",
+      "name": "Olives",
+      "description": "Olives is a JS MVC framework that helps you create realtime UIs. It includes a set of AMD/CommonJS modules that are easily extensive, a high level of abstraction to reduce boilerplate and is based on socket.io, to provide a powerful means to communicate with node.js.",
+      "source": "https://github.com/flams/olives"
+    },
+    {
+      "path": "labs/architecture-examples/plastronjs",
+      "name": "PlastronJS",
+      "description": "PlastronJS is an mvc framework built on top of the Closure Library and built to compile with projects that use the Closure Compiler.",
+      "source": "https://github.com/rhysbrettbowen/PlastronJS"
+    },
+    {
+      "path": "labs/architecture-examples/dijon",
+      "name": "Dijon",
+      "description": "Dijon is an IOC and DI micro-framework for Javascript. Originally it was meant to be a port of Robotlegs, but deviated to something quite different. It remains however heavily inspired by Robotlegs, and more specifically Swiftsuspenders.",
+      "source": "https://github.com/creynders/dijon-framework"
+    },
+    {
+      "path": "labs/architecture-examples/rappidjs",
+      "name": "rAppid.js",
+      "description": "rAppid.js is a declarative JavaScript framework for rapid web application development. It supports dependency loading, Model-View binding, View-Model binding, dependency injection and i18n.",
+      "source": "http://www.rappidjs.com"
+    },
+    {
+      "path": "labs/architecture-examples/extjs_deftjs",
+      "name": "DeftJS + ExtJS",
+      "description": "Essential extensions for enterprise web and mobile application development with Ext JS and Sencha Touch",
+      "source": "http://deftjs.org"
+    },
+    {
+      "path": "labs/architecture-examples/ariatemplates",
+      "name": "Aria Templates",
+      "description": "Aria Templates has been designed for web apps that are used 8+ hours a day, and that need to display and process high amount of data with a minimum of bandwidth consumption.",
+      "source": "http://ariatemplates.com"
+    },
+    {
+      "path": "labs/dependency-examples/enyo_backbone",
+      "name": "Enyo +<br>Backbone.js",
+      "description": "Enyo is a simple but powerful encapsulation model, which helps you factor application functionality into self-contained building blocks that are easy to reuse and maintain.",
+      "source": "http://enyojs.com"
+    },
+    {
+      "path": "architecture-examples/angularjs-perf",
+      "name": "AngularJS <br>(optimized)",
+      "description": "What HTML would have been had it been designed for web apps. A version with several performance optimizations.",
+      "source": "http://angularjs.org"
+    },
+    {
+      "path": "labs/architecture-examples/react",
+      "name": "React",
+      "description": "React is a JavaScript library for building user interfaces.",
+      "source": "http://facebook.github.io/react"
+    },
+    {
+      "path": "labs/architecture-examples/sapui5",
+      "name": "SAPUI5",
+      "description": "SAPUI5 is SAP's HTML5-based UI technology that allows you to build rich, interactive Web applications.",
+      "source": "http://scn.sap.com/community/developer-center/front-end"
+    },
+    {
+      "path": "labs/architecture-examples/exoskeleton",
+      "name": "Exoskeleton",
+      "description": "A faster and leaner Backbone for your HTML5 apps.",
+      "source": "http://exosjs.com"
+    },
+    {
+      "path": "labs/architecture-examples/atmajs",
+      "name": "Atma.js",
+      "description": "HMVC and the component-based architecture for building client, server or hybrid applications",
+      "source": "http://atmajs.com"
+    }
+  ],
+  [
+    {
+      "path": "architecture-examples/spine",
+      "name": "Spine",
+      "description": "Spine is a lightweight framework for building JavaScript web applications. Spine gives you an MVC structure and then gets out of your way, allowing you to concentrate on the fun stuff, building awesome web applications.",
+      "source": "http://spinejs.com"
+    },
+    {
+      "path": "architecture-examples/dart/web",
+      "name": "Dart",
+      "description": "Dart firstly targets the development of modern and large scale browser-side web apps. It's an object oriented language with a C-style syntax. It has two run modes : it can be compiled to JS, and will later run in native VM in compliant browsers (just in a dedicated Chromium provided with Dart SDK for the moment).",
+      "source": "http://dartlang.org"
+    },
+    {
+      "path": "architecture-examples/gwt",
+      "name": "GWT",
+      "description": "Google Web Toolkit (GWT) is an MVP development toolkit for building and optimizing complex browser-based applications. GWT is used by many products at Google, including Google AdWords.",
+      "source": "https://developers.google.com/web-toolkit"
+    },
+    {
+      "path": "architecture-examples/closure",
+      "name": "Closure",
+      "description": "The Closure Library is a broad, well-tested, modular, and cross-browser JavaScript library. You can pull just what you need from a large set of reusable UI widgets and controls, and from lower-level utilities for DOM manipulation, server communication, animation, data structures, unit testing, rich-text editing, and more.",
+      "source": "http://code.google.com/closure/library"
+    },
+    {
+      "path": "labs/architecture-examples/batman",
+      "name": "Batman.js",
+      "description": "Batman.js is a framework for building rich web applications with CoffeeScript or JavaScript. App code is concise and declarative, thanks to a powerful system of view bindings and observable properties. The API is designed with developer and designer happiness as its first priority.",
+      "source": "http://batmanjs.org"
+    },
+    {
+      "path": "labs/architecture-examples/typescript-backbone",
+      "name": "TypeScript <br>+ Backbone.js",
+      "description": "TypeScript is a language for application-scale JavaScript development. It offers classes, modules, interfaces and type-checking at compile time to help you build robust components.",
+      "source": "http://typescriptlang.org"
+    },
+    {
+      "path": "labs/architecture-examples/typescript-angular",
+      "name": "TypeScript <br>+ AngularJS",
+      "description": "An AngularJS + TypeScript implementation of TodoMVC. The only significant difference between this and the vanilla Angular app is that dependency injection is done via annotated constructors, which allows minification of JavaScript.",
+      "source": "http://typescriptlang.org"
+    },
+    {
+      "path": "labs/architecture-examples/serenadejs",
+      "name": "Serenade.js",
+      "description": "Serenade.js is yet another MVC client side JavaScript framework. Why do we indulge in recreating the wheel? We believe that Serenade.js more closely follows the ideas of classical MVC than competing frameworks.",
+      "source": "https://github.com/elabs/serenade.js"
+    }
+  ],
+  [
+    {
+      "path": "labs/architecture-examples/backbone_marionette",
+      "name": "MarionetteJS",
+      "description": "Backbone.Marionette is a composite application library for Backbone.js that aims to simplify the construction of large scale JavaScript applications.",
+      "source": "http://marionettejs.com"
+    },
+    {
+      "path": "labs/architecture-examples/thorax",
+      "name": "Thorax",
+      "description": "An opinionated, battle tested Backbone + Handlebars framework to build large scale web applications.",
+      "source": "http://thoraxjs.org"
+    },
+    {
+      "path": "labs/dependency-examples/chaplin-brunch/public",
+      "name": "Chaplin + Brunch",
+      "description": "Chaplin is an architecture for JavaScript applications using the Backbone.js library. Chaplin addresses Backbone’s limitations by providing a lightweight and flexible structure that features well-proven design patterns and best practises.",
+      "source": "http://chaplinjs.org"
+    },
+    {
+      "path": "http://chaplinjs.org",
+      "name": "Website",
+      "description": null,
+      "source": null
+    }
+  ],
+  [
+    {
+      "path": "dependency-examples/backbone_require",
+      "name": "Backbone.js + RequireJS",
+      "description": "RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments, like Rhino and Node. Using a modular script loader like RequireJS will improve the speed and quality of your code.",
+      "source": "http://requirejs.org"
+    },
+    {
+      "path": "dependency-examples/flight",
+      "name": "Flight",
+      "description": "Flight is a lightweight, component-based JavaScript framework that maps behavior to DOM nodes. Twitter uses it for their web applications.",
+      "source": "http://twitter.github.com/flight"
+    },
+    {
+      "path": "labs/dependency-examples/knockoutjs_require",
+      "name": "Knockout + RequireJS",
+      "description": "This project is an adaptation of /architecture-examples/knockoutjs with require.js.",
+      "source": "http://knockoutjs.com"
+    },
+    {
+      "path": "labs/dependency-examples/angularjs_require",
+      "name": "AngularJS + RequireJS",
+      "description": "What HTML would have been had it been designed for web apps. This is an example of using it with AMD modules.",
+      "source": "http://angularjs.org"
+    },
+    {
+      "path": "labs/dependency-examples/canjs_require",
+      "name": "CanJS + RequireJS",
+      "description": "CanJS is a client-side, JavaScript framework that makes building rich web applications easy. The AMD version lets you use the framework in a fully modular fashion and will only what you actually need.",
+      "source": "http://canjs.us"
+    },
+    {
+      "path": "labs/dependency-examples/troopjs_require",
+      "name": "TroopJS + RequireJS",
+      "description": "TroopJS attempts to package popular front-end technologies and bind them with minimal effort for the developer. It includes jQuery for DOM manipulation, When.js for promises, RequireJS for modularity and Has.js for feature detection. On top, it includes Pub/Sub support, templating, weaving (widgets to DOM) and auto-wiring.",
+      "source": "https://github.com/troopjs"
+    },
+    {
+      "path": "labs/dependency-examples/thorax_lumbar/public",
+      "name": "Thorax + Lumbar",
+      "description": "An opinionated, battle tested Backbone + Handlebars framework to build large scale web applications. This implementation uses Lumbar, a route based module loader.",
+      "source": "http://walmartlabs.github.com/lumbar"
+    },
+    {
+      "path": "labs/dependency-examples/somajs_require",
+      "name": "soma.js + RequireJS",
+      "description": "soma.js is a framework created to build scalable and maintainable javascript applications.",
+      "source": "http://somajs.github.com/somajs"
+    },
+    {
+      "path": "labs/dependency-examples/durandal",
+      "name": "Durandal",
+      "description": "Single Page Apps Done Right",
+      "source": "http://durandaljs.com"
+    },
+    {
+      "path": "labs/dependency-examples/lavaca_require",
+      "name": "Lavaca + RequireJS",
+      "description": "A curated collection of tools for building mobile web applications.",
+      "source": "http://getlavaca.com"
+    }
+  ],
+  [
+    {
+      "path": "http://todomvcapp.meteor.com",
+      "name": "Meteor",
+      "description": "Meteor is an ultra-simple environment for building modern websites. A Meteor application is a mix of JavaScript that runs inside a client web browser, JavaScript that runs on the Meteor server inside a Node.js container, and all the supporting HTML fragments, CSS rules, and static assets. Meteor automates the packaging and transmission of these different components. And, it is quite flexible about how you choose to structure those components in your file tree.",
+      "source": "http://meteor.com"
+    },
+    {
+      "path": "http://todomvc.derbyjs.com",
+      "name": "Derby",
+      "description": "MVC framework making it easy to write realtime, collaborative applications that run in both Node.js and browsers.",
+      "source": "http://derbyjs.com"
+    },
+    {
+      "path": "https://github.com/tastejs/todomvc/blob/gh-pages/labs/architecture-examples/socketstream/readme.md",
+      "name": "SocketStream",
+      "description": "SocketStream is a fast, modular Node.js web framework dedicated to building realtime single-page apps",
+      "source": "http://www.socketstream.org"
+    },
+    {
+      "path": "labs/architecture-examples/firebase-angular",
+      "name": "Firebase + AngularJS",
+      "description": "Firebase is a scalable realtime backend that lets you build apps without managing servers. Firebase persists and updates JSON data in realtime and is best used in combination with a JavaScrpt MV* framework such as AngularJS or Backbone.",
+      "source": "https://www.firebase.com"
+    }
+  ],
+  [
+    {
+      "path": "vanilla-examples/vanillajs",
+      "name": "Vanilla JS",
+      "description": "You know JavaScript right? :P",
+      "source": "https://developer.mozilla.org/en/JavaScript"
+    },
+    {
+      "path": "architecture-examples/jquery",
+      "name": "jQuery",
+      "description": "jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. jQuery is designed to change the way that you write JavaScript.",
+      "source": "http://jquery.com"
+    }
+  ]
+]
