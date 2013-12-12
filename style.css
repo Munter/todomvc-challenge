@@ -102,3 +102,9 @@ body > footer p iframe {
 #disqus_thread {
     padding-top: 1em;
 }
+
+code {
+    font-family: courier, monospace;
+    font-size: 0.8em;
+    color: #666;
+}
