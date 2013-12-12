@@ -1,22 +1,87 @@
 body {
-  font-size: 24px;
-  font-family: 'Fenix', Georgia, serif;
+    font-size: 24px;
+    font-family: 'Fenix', Georgia, serif;
+    background-color: #eee;
+    color: #444;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 p {
-  font-size: 1em; /* 24px */
-  line-height: 1.2500em; /* 30px */
-  margin: 0 0 1.2500em 0;
+    font-size: 1em; /* 24px */
+    line-height: 1.2500em; /* 30px */
+    margin: 0 0 1.2500em 0;
+}
+
+a {
+    text-decoration: none;
+    color: #cc8400;
+}
+
+a:hover {
+    color: orange;
+}
+
+a.fixed {
+    text-decoration: line-through;
+    color: #996300;
 }
 
 body > section,
 body > header,
 body > footer {
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 760px;
+}
+
+body > hr {
+    max-width: 800px;
+}
+
+section article {
+    position: relative;
+    padding: 0px 20px;
+    padding-left: 70px;
+
+    overflow: hidden;
+}
+
+section article:nth-child(2n) {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+section article::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 24px;
+
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border: 2px solid #aaa;
+    border-radius: 3px;
+    font-size: 2em;
+    text-align: center;
+}
+
+article.works::before {
+    content: '✓';
+    color: green;
+}
+
+article.broken::before {
+    content: '✗';
+    color: red;
+}
+
+article header p {
+    float: right;
+}
+
+article header p a {
+    margin-left: 20px;
 }
