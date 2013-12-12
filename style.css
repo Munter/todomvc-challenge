@@ -72,9 +72,31 @@ section article::before {
     text-align: center;
 }
 
+article.untested {
+    opacity: 0.5;
+}
+
+article.untested::before {
+    content: '⌛';
+    font-size: 1.5em;
+}
+
+article.untested header p,
+article.untested h4,
+article.untested ol,
+article.untested p.description {
+    display: none;
+}
+
 article.works::before {
     content: '✓';
     color: green;
+}
+
+article.partial::before {
+    content: '⚠';
+    font-size: 1.5em;
+    color: #999900;
 }
 
 article.broken::before {
