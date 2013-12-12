@@ -37,6 +37,10 @@ body > footer {
     max-width: 760px;
 }
 
+body > footer {
+    padding-bottom: 2em;
+}
+
 body > hr {
     max-width: 800px;
 }
@@ -84,4 +88,17 @@ article header p {
 
 article header p a {
     margin-left: 20px;
+}
+
+body > footer p {
+    font-size: 0.6em;
+    line-height: 0.6em;
+}
+
+body > footer p iframe {
+    margin-bottom: -0.3em;
+}
+
+#disqus_thread {
+    padding-top: 1em;
 }
