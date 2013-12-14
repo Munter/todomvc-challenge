@@ -15,12 +15,13 @@ Object.keys(learn).forEach(function (key) {
             group.examples.forEach(function (example) {
                 if (!(/https?/).test(example.url)) {
                     describe(example.name, function () {
-                        var assetGraph;
+                        var assetGraph,
+                            dir = example.source_url || example.url;
 
                         before(function (done) {
                             this.timeout(0);
                             assetGraph = new AssetGraph({
-                                root: example.url
+                                root: dir
                             });
 
                             assetGraph.infos = [];
@@ -42,6 +43,7 @@ Object.keys(learn).forEach(function (key) {
                                 .registerRequireJsConfig({preventPopulationOfJavaScriptAssetsUntilConfigHasBeenFound: true})
                                 .loadAssets('index.html')
                                 .buildProduction({
+                                    version: 'dev',
                                     optimizeImages: true,
                                     inlineByRelationType: {
                                         CssImage: 8192
@@ -50,7 +52,7 @@ Object.keys(learn).forEach(function (key) {
                                     stripDebug: true
                                 })
                                 .if(assetGraph.errors.concat(assetGraph.warnings).concat(assetGraph.infos).length === 0)
-                                    .writeAssetsToDisc({url: /^file:/, isLoaded: true}, urlTools.fsDirToFileUrl(example.url + '-dist'))
+                                    .writeAssetsToDisc({url: /^file:/, isLoaded: true}, urlTools.fsDirToFileUrl(dir + '-dist'))
                                 .endif()
                                 .run(done);
                         });
