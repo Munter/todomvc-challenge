@@ -737,7 +737,7 @@
 		"homepage": "durandaljs.com",
 		"examples": [{
 			"name": "Dependency Example",
-			"url": "labs/dependency-examples/durandal/index.html"
+			"url": "labs/dependency-examples/durandal"
 		}],
 		"link_groups": [{
 			"heading": "Official Resources",
