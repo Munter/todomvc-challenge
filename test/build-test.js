@@ -1,72 +1,75 @@
+/*global describe, it, before, after*/
+
 var path = require('path'),
-    chalk = require('chalk'),
     glob = require('glob'),
-    async = require('async'),
     urlTools = require('../node_modules/assetgraph-builder/node_modules/assetgraph/lib/util/urlTools'),
     AssetGraph = require('assetgraph-builder'),
-    mocha = require('mocha'),
-    assert = require('assert');
+    expect = require('expect.js'),
+    learn = JSON.parse(require('fs').readFileSync('learn.json', 'utf8'));
 
+Object.keys(learn).forEach(function (key) {
+    if (key !== 'templates') {
+        var group = learn[key];
 
-glob('**/*-examples/*/index.html', function (error, files) {
-    files = files.filter(function (file) {
-        return !(/-dist\/index\.html$/).test(file);
-    });
+        describe(group.name, function () {
+            group.examples.forEach(function (example) {
+                if (!(/https?/).test(example.url)) {
+                    describe(example.name, function () {
+                        var assetGraph;
 
-    var buildFunctions = files.map(function (file) {
-        var dir = path.dirname(file);
+                        before(function (done) {
+                            this.timeout(0);
+                            assetGraph = new AssetGraph({
+                                root: example.url
+                            });
 
-        return function (callback) {
-            var assetGraph = new AssetGraph({
-                    root: dir
-                });
+                            assetGraph.infos = [];
+                            assetGraph.warnings = [];
+                            assetGraph.errors = [];
 
-            assetGraph.infos = [];
-            assetGraph.warnings = [];
-            assetGraph.errors = [];
+                            assetGraph
+                                .on('info', function (info) {
+                                    assetGraph.infos.push((info.asset ? info.asset.urlOrDescription + ': ' : '') + info.message);
+                                })
+                                .on('warn', function (err) {
+                                    if (err.relationType !== 'JavaScriptCommonJsRequire') {
+                                        assetGraph.warnings.push((err.asset ? err.asset.urlOrDescription + ': ' : '') + err.message);
+                                    }
+                                })
+                                .on('error', function (err) {
+                                    assetGraph.errors.push((err.asset ? err.asset.urlOrDescription + ': ' : '') + err.stack);
+                                })
+                                .registerRequireJsConfig({preventPopulationOfJavaScriptAssetsUntilConfigHasBeenFound: true})
+                                .loadAssets('index.html')
+                                .buildProduction({
+                                    optimizeImages: true,
+                                    inlineByRelationType: {
+                                        CssImage: 8192
+                                    },
+                                    asyncScripts: true,
+                                    stripDebug: true
+                                })
+                                .if(assetGraph.errors.concat(assetGraph.warnings).concat(assetGraph.infos).length === 0)
+                                    .writeAssetsToDisc({url: /^file:/, isLoaded: true}, urlTools.fsDirToFileUrl(example.url + '-dist'))
+                                .endif()
+                                .run(done);
+                        });
 
-            assetGraph
-                .on('info', function (info) {
-                    //console.warn(chalk.cyan(' ℹ ' + (info.asset ? info.asset.urlOrDescription + ': ' : '') + info.message));
-                    assetGraph.infos.push((info.asset ? info.asset.urlOrDescription + ': ' : '') + info.message);
-                })
-                .on('warn', function (err) {
-                    // These are way too noisy
-                    if (err.relationType !== 'JavaScriptCommonJsRequire') {
-                        //console.warn(chalk.yellow(' ⚠ ' + (err.asset ? err.asset.urlOrDescription + ': ' : '') + err.message));
-                        assetGraph.warnings.push((err.asset ? err.asset.urlOrDescription + ': ' : '') + err.message);
-                    }
-                })
-                .on('error', function (err) {
-                    //console.error(chalk.red(' ✘ ' + (err.asset ? err.asset.urlOrDescription + ': ' : '') + err.stack));
-                    assetGraph.errors.push((err.asset ? err.asset.urlOrDescription + ': ' : '') + err.stack);
-                })
-                .registerRequireJsConfig({preventPopulationOfJavaScriptAssetsUntilConfigHasBeenFound: true})
-                .loadAssets('index.html')
-                .buildProduction({
-                    optimizeImages: true,
-                    inlineByRelationType: {
-                        CssImage: 8192
-                    },
-                    asyncScripts: true,
-                    stripDebug: true
-                })
-                .writeAssetsToDisc({url: /^file:/, isLoaded: true}, urlTools.fsDirToFileUrl(dir + '-dist'))
-                //.writeStatsToStderr()
-                .run(function (error) {
-                    var errors = assetGraph.errors.concat(assetGraph.warnings).concat(assetGraph.infos);
+                        it('Should build without any infos', function () {
+                            expect(assetGraph.infos).to.be.empty();
+                        });
 
-                    if (errors.length) {
-                        callback(errors);
-                    } else {
-                        callback(undefined, dir);
-                    }
-                });
-        };
-    });
+                        it('Should build without any warnings', function () {
+                            expect(assetGraph.warnings).to.be.empty();
+                        });
 
-    async.parallel(buildFunctions, function (err, results) {
-        console.error(err.map(chalk.red));
-        console.log(results.map(chalk.green));
-    });
+                        it('Should build without any errors', function () {
+                            expect(assetGraph.errors).to.be.empty();
+                        });
+                    });
+                }
+
+            });
+        });
+    }
 });

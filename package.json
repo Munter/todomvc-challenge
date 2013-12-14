@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,6 @@
     "assetgraph-builder": "~1.8.2",
     "mocha": "~1.15.1",
     "glob": "~3.2.7",
-    "chalk": "~0.4.0",
-    "async": "~0.2.9"
+    "expect.js": "~0.2.0"
   }
 }
