@@ -81,7 +81,7 @@ article.untested::before {
     font-size: 1.5em;
 }
 
-article.untested header p,
+/*article.untested header p,*/
 article.untested h4,
 article.untested ol,
 article.untested p.description {
