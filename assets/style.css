@@ -1,12 +1,12 @@
 body {
     font-size: 24px;
-    font-family: 'Fenix', Georgia, serif;
+    font-family: Georgia, serif;
     background-color: #eee;
     color: #444;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Raleway', sans-serif;
+    font-family: sans-serif;
 }
 
 p {
