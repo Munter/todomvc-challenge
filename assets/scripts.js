@@ -1,3 +1,49 @@
+(function () {
+    var articles = document.querySelectorAll('section > article'),
+        apps = {
+            total: 0,
+            untested: 0,
+            working: 0,
+            broken: 0
+        },
+        list = [],
+        percentage = 100 / articles.length,
+        fragment = document.createDocumentFragment();
+
+    apps.total = articles.length;
+
+    Array.prototype.forEach.call(articles, function (article) {
+        var node = document.createElement('a');
+        node.style.width = percentage + '%';
+        node.className = article.className;
+        node.title = article.querySelector('header h3 a').innerHTML;
+        node.href = '#' + node.title;
+        node.onclick = function () {
+            article.scrollIntoView();
+            return false;
+        };
+        fragment.appendChild(node);
+
+        switch (article.className) {
+        case 'works':
+            apps.working += 1;
+            break;
+        case 'broken':
+            apps.broken += 1;
+            break;
+        default:
+            apps.untested += 1;
+        }
+    });
+
+    Object.keys(apps).forEach(function (key) {
+        document.querySelector('#apps-' + key).innerHTML = apps[key];
+    });
+
+    document.querySelector('#progress').appendChild(fragment);
+})();
+
+
 /*global defer*/
 window.defer = (function (window, document, script) {
     var scripts = {},
