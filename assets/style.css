@@ -141,12 +141,13 @@ code {
     list-style: none;
     margin: 0 0 1em;
     padding: 0;
+    height: 1em;
 }
 
 #progress a {
     float: left;
     background-color: #ccc;
-    height: 20px;
+    height: 100%;
 }
 
 #progress .works {

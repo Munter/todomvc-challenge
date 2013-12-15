@@ -1,12 +1,13 @@
 (function () {
     var articles = document.querySelectorAll('section > article'),
+        bugLinks = document.querySelectorAll('article ol a[href*="github.com"'),
+        bugs = {},
         apps = {
             total: 0,
             untested: 0,
             working: 0,
             broken: 0
         },
-        list = [],
         percentage = 100 / articles.length,
         fragment = document.createDocumentFragment();
 
@@ -41,6 +42,39 @@
     });
 
     document.querySelector('#progress').appendChild(fragment);
+
+    Array.prototype.forEach.call(bugLinks, function (link) {
+        if (!bugs[link.href]) {
+            bugs[link.href] = {
+                text: ''
+            };
+        }
+
+        var bug = bugs[link.href];
+
+        bug.className = link.className;
+
+        if (bug.text.length < link.innerHTML.length) {
+            bug.text = link.innerHTML;
+        }
+    });
+
+    fragment = document.createDocumentFragment();
+
+    Object.keys(bugs).forEach(function (key) {
+        var node = document.createElement('li'),
+            link = document.createElement('a'),
+            bug = bugs[key];
+
+        link.href = key;
+        link.className = bug.className;
+        link.innerHTML = bug.text;
+
+        node.appendChild(link);
+        fragment.appendChild(node);
+    });
+
+    document.querySelector('#bugs').appendChild(fragment);
 })();
 
 
