@@ -1,0 +1,30 @@
+{
+  "name": "todomvc-challenge",
+  "version": "0.0.0",
+  "description": "Build all TodoMVC implementations",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "travis": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Munter/todomvc-challenge.git"
+  },
+  "author": "Peter Müller <munter@fumle.dk>",
+  "license": "MIT",
+  "gitHead": "6d8491af9476fb27899d0713862e95232767d66b",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/Munter/todomvc-challenge/issues"
+  },
+  "devDependencies": {
+    "assetgraph-builder": "~1.8.2",
+    "mocha": "~1.15.1",
+    "glob": "~3.2.7",
+    "expect.js": "~0.2.0"
+  }
+}
