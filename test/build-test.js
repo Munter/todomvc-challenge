@@ -52,7 +52,7 @@ Object.keys(learn).forEach(function (key) {
                                     stripDebug: true
                                 })
                                 .if(assetGraph.errors.concat(assetGraph.warnings).concat(assetGraph.infos).length === 0)
-                                    .writeAssetsToDisc({url: /^file:/, isLoaded: true}, urlTools.fsDirToFileUrl(dir + '-dist'))
+                                    //.writeAssetsToDisc({url: /^file:/, isLoaded: true}, urlTools.fsDirToFileUrl(dir + '-dist'))
                                 .endif()
                                 .run(done);
                         });
