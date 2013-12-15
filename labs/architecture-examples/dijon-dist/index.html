@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en" data-framework="dijon" data-version="dev"><head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>Dijon • TodoMVC</title><!--[if lt IE 8]><link rel="stylesheet" href="static/48d04c2489.css" /><![endif]--><!--[if gte IE 8]><!--><link rel="stylesheet" href="static/e1c0b5fa2d.css" /><!--<![endif]--></head><body><section id="todoapp"><header id="header"><h1>todos</h1><input type="text" id="new-todo" placeholder="What needs to be done?" autofocus="" /></header> <section id="main"><input type="checkbox" id="toggle-all" /> <label for="toggle-all">Mark all as complete</label><ul id="todo-list"></ul></section><footer id="footer"><span id="todo-count"><strong>0</strong> item left</span> <button id="clear-completed">Clear completed</button></footer></section> <footer id="info"><p>Double-click to edit a todo</p><p>Based on app by <a href="http://github.com/sindresorhus">Sindre Sorhus</a></p><p>Created by <a href="http://www.creynders.be">Camille Reynders</a></p><p>Part of <a href="http://todomvc.com">TodoMVC</a></p></footer><script type="text/x-handlebars-template" id="todo-template">
+		{{#this}}
+		<li {{#if completed}}class="completed"{{/if}} data-id="{{id}}">
+			<div class="view">
+				<input class="toggle" type="checkbox" {{#if completed}}checked{{/if}}>
+				<label>{{title}}</label>
+				<button class="destroy"></button>
+			</div>
+			<input class="edit" value="{{title}}">
+		</li>
+		{{/this}}
+		</script><script src="static/e18c17f6ae.js" async="async"></script></body></html>
