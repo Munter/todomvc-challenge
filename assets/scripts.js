@@ -1,6 +1,6 @@
 (function () {
     var articles = document.querySelectorAll('section > article'),
-        bugLinks = document.querySelectorAll('article ol a[href*="github.com"'),
+        bugLinks = document.querySelectorAll('article ol a[href*="github.com"]'),
         bugs = {},
         apps = {
             total: 0,
