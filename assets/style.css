@@ -24,7 +24,8 @@ a:hover {
     color: orange;
 }
 
-a.fixed {
+a.fixed,
+a.wontfix {
     text-decoration: line-through;
     color: #996300;
 }
@@ -160,4 +161,39 @@ code {
 
 #progress .partial {
     background-color: #cc3;
+}
+
+#bugs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    margin-left: 2ex;
+}
+
+#bugs li {
+    margin-bottom: 0.5em;
+}
+
+#bugs a {
+    position: relative;
+}
+
+#bugs a:before {
+    position: absolute;
+    top: 0;
+    left: -2ex;
+
+    content: '⌛';
+    color: #999;
+}
+
+#bugs .fixed:before {
+    content: '✓';
+    color: green;
+}
+
+#bugs .wontfix:before {
+    content: '✗';
+    color: red;
 }
