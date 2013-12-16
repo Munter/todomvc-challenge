@@ -6,6 +6,7 @@
             total: 0,
             untested: 0,
             working: 0,
+            partial: 0,
             broken: 0
         },
         percentage = 100 / articles.length,
@@ -31,6 +32,9 @@
             break;
         case 'broken':
             apps.broken += 1;
+            break;
+        case 'partial':
+            apps.partial += 1;
             break;
         default:
             apps.untested += 1;

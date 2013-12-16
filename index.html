@@ -37,7 +37,7 @@
 
         <div id="progress"></div>
 
-        <p>Out of <span id="apps-total"></span> total TodoMVC apps, <span id="apps-working"></span> are working, <span id="apps-broken"></span> are not working and <span id="apps-untested"></span> are so far untested.
+        <p>Out of <span id="apps-total"></span> total TodoMVC apps, <span id="apps-working"></span> are working, <span id="apps-broken"></span> are not working and <span id="apps-untested"></span> are so far untested. <span id="apps-partial"></span> apps are following a bad development practice which assetgraph will never support.
 
 
         <h3>Bugs found</h3>
@@ -462,7 +462,7 @@
         </article>
 
 
-        <article class="broken">
+        <article class="partial">
             <header>
                 <p>
                     <a href="labs/architecture-examples/olives/">Before</a>
@@ -475,7 +475,8 @@
 
             <h4>Log</h4>
             <ol>
-                <li>2013-12-15: <a href="https://github.com/One-com/assetgraph/issues/143">Population fails to pick up 3 argument AMD define call</a></li>
+                <li>2013-12-17: Won't fix support for 3 argument define. Olives is going against best practice and we do not wish to support this.</li>
+                <li>2013-12-15: <a href="https://github.com/One-com/assetgraph/issues/143" class="wontfix">Population fails to pick up 3 argument AMD define call</a></li>
                 <li>2013-12-15: Build Successful</li>
             </ol>
         </article>

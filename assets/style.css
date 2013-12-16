@@ -157,3 +157,7 @@ code {
 #progress .broken {
     background-color: #f99;
 }
+
+#progress .partial {
+    background-color: #cc3;
+}
