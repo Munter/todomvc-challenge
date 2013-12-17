@@ -50,7 +50,8 @@
     Array.prototype.forEach.call(bugLinks, function (link) {
         if (!bugs[link.href]) {
             bugs[link.href] = {
-                text: ''
+                text: '',
+                apps: []
             };
         }
 
@@ -61,6 +62,8 @@
         if (bug.text.length < link.innerHTML.length) {
             bug.text = link.innerHTML;
         }
+
+        bug.apps.push(link.parentNode.parentNode.parentNode);
     });
 
     fragment = document.createDocumentFragment();
@@ -68,13 +71,30 @@
     Object.keys(bugs).forEach(function (key) {
         var node = document.createElement('li'),
             link = document.createElement('a'),
+            p = document.createElement('p'),
             bug = bugs[key];
 
         link.href = key;
         link.className = bug.className;
         link.innerHTML = bug.text;
 
+        p.innerHTML = 'Affected apps: ';
+        p.className = 'affected';
+        Array.prototype.forEach.call(bug.apps, function (appNode) {
+            var a = document.createElement('a'),
+                name = appNode.querySelector('header h3 a').innerHTML;
+
+            a.href = '#' + name;
+            a.onclick = function () {
+                appNode.scrollIntoView();
+                return false;
+            };
+            a.innerHTML = name;
+            p.appendChild(a);
+        });
+
         node.appendChild(link);
+        node.appendChild(p);
         fragment.appendChild(node);
     });
 

@@ -175,11 +175,11 @@ code {
     margin-bottom: 0.5em;
 }
 
-#bugs a {
+#bugs li > a {
     position: relative;
 }
 
-#bugs a:before {
+#bugs li > a:before {
     position: absolute;
     top: 0;
     left: -2ex;
@@ -196,4 +196,14 @@ code {
 #bugs .wontfix:before {
     content: '✗';
     color: red;
+}
+
+p.affected {
+    font-family: sans-serif;
+    font-size: 60%;
+    color: #999;
+}
+
+p.affected a {
+    margin-left: 1ex;
 }
