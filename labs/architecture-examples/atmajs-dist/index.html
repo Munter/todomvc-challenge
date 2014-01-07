@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-framework="atmajs" data-version="dev"><head><meta charset="utf-8" /><title>Atma.js • TodoMVC</title><!--[if lt IE 8]><link rel="stylesheet" href="static/48d04c2489.css" /><![endif]--><!--[if gte IE 8]><!--><link rel="stylesheet" href="static/e1c0b5fa2d.css" /><!--<![endif]--></head><body><script type="mask/template" id="layout">
+			/*
+
+				TodoMVC Atma.js Application
+
+				1. Read readme.md - you will get basic information about the libraries
+				2. Hint: Viewing *.mask files enable javascript or less syntax highlighting in your IDE
+
+
+				The application structure guide:
+
+				Controls Overview:
+					todo:input;
+
+				Components Overview:
+					:app\
+						:filter;
+						:todoList\
+							:todoTask;
+
+
+				Scripts overview (sorted from the most atomic parts up to the application component):
+					js/
+						model/Todos.js
+						cntrl/input.js
+						filter/filter.js
+						todoList/
+							todoTask/todoTask.js
+							todoList.js
+						app.js
+
+				_If the controller loads a template, do not forget to review that._
+			 */
+
+
+			// Application Template
+
+			section #todoapp {
+				header #header {
+					h1 > 'todos'
+
+					todo:input #new-todo
+						autofocus
+						x-signal = 'enter: newTask'
+						placeholder = 'What needs to be done?'
+						;
+
+				}
+
+				section #main >
+					:todoList;
+
+				footer #footer xx-visible = 'status.count' {
+
+					span #todo-count {
+						strong > '~[bind: status.todoCount]'
+						span > ' item~[bind: status.todoCount != 1 ? "s"] left'
+					}
+
+					:filter;
+
+					button #clear-completed
+						xx-visible = 'status.completedCount > 0'
+						x-signal = 'click: removeAllCompleted' {
+
+							'Clear completed (~[bind:status.completedCount])'
+					}
+				}
+			}
+			footer #info {
+				p { 'Double-click to edit a todo' }
+				p { 'Created by ' a href='http://github.com/tenbits' > 'tenbits' }
+				p { 'Part of ' a href='http://todomvc.com' > 'TodoMVC' }
+			}
+		</script><script src="static/85af13694b.js"></script></body></html>
