@@ -1,0 +1,14 @@
+{
+  "name": "backbone.localStorage",
+  "main": "./backbone.localStorage.js",
+  "dependencies": {},
+  "homepage": "https://github.com/paulmillr/Backbone.localStorage",
+  "_release": "9c225b37bd",
+  "_resolution": {
+    "type": "commit",
+    "commit": "9c225b37bdea4ac21d4b2445fa8962fe74e3175b"
+  },
+  "_source": "git://github.com/paulmillr/Backbone.localStorage.git",
+  "_target": "9c225b37bdea4ac21d4b2445fa8962fe74e3175b",
+  "_originalSource": "git://github.com/paulmillr/Backbone.localStorage.git"
+}
