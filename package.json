@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dalek": "dalek test/dalek-test.js -b chrome"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,11 @@
   },
   "devDependencies": {
     "assetgraph-builder": "^2.9.0",
+    "dalek-browser-chrome": "0.0.11",
+    "dalekjs": "0.0.9",
     "glob": "~3.2.7",
     "mocha": "~1.15.1",
+    "node.extend": "~1.0.9",
     "react-tools": "^0.12.2",
     "unexpected": "^5.1.1"
   }
