@@ -1,0 +1,1 @@
+<polymer-element name="td-input" extends="input" on-keyup="keyupAction" on-keypress="keypressAction"><script>!function(){var t=13,e=27;Polymer("td-input",{keypressAction:function(e){e.keyCode===t&&this.fire("td-input-commit")},keyupAction:function(t){t.keyCode===e&&this.fire("td-input-cancel")}})}();</script></polymer-element>
