@@ -24,6 +24,7 @@
     "assetgraph-builder": "^2.9.0",
     "glob": "~3.2.7",
     "mocha": "~1.15.1",
+    "react-tools": "^0.12.2",
     "unexpected": "^5.1.1"
   }
 }
