@@ -7,7 +7,7 @@ var keys = {
         'feed the cat',
         'book a doctors appointment'
     ],
-    domain = 'localhost:12345';
+    domain = 'http://localhost:12345';
 
 function assertItems(test, items) {
     console.log(test);
@@ -23,7 +23,7 @@ module.exports = {
     'TodoMVC - VanillaJS': function (test) {
         // Open and check that bootstrap is correct
         test
-            .open('http://' + domain + '/vanilla-examples/vanillajs/')
+            .open(domain + '/vanilla-examples/vanillajs/')
             .assert.doesntExist('#todo-list li', 'There should be no todos')
             .assert.notVisible('#main', '#main should be hidden')
             .assert.notVisible('#footer', '#footer should be hidden');
@@ -67,13 +67,13 @@ module.exports = {
         // Complete first item
         test
             .log.dom('#todo-list')
-            .click('#todo-list li:first-child .toogle')
+            .click('#todo-list li:first-child .toggle')
             .assert.numberOfElements('#todo-list li.completed', 1, 'One items should be checked')
             .assert.notSelected('#toggle-all');
 
         // Complete last item
         test
-            .click('#todo-list li:last-child .toogle')
+            .click('#todo-list li:last-child .toggle')
             .assert.numberOfElements('#todo-list li.completed', 2, 'All items should be checked')
             .assert.selected('#toggle-all');
 

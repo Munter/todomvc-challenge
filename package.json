@@ -24,6 +24,7 @@
   "devDependencies": {
     "assetgraph-builder": "^2.9.0",
     "dalek-browser-chrome": "0.0.11",
+    "dalek-cli": "0.0.5",
     "dalekjs": "0.0.9",
     "glob": "~3.2.7",
     "mocha": "~1.15.1",
