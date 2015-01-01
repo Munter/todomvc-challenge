@@ -41,10 +41,11 @@ Object.keys(learn).forEach(function (key) {
                                 .loadAssets('index.html')
                                 .buildProduction({
                                     version: 'dev',
-                                    optimizeImages: true,
-                                    inlineByRelationType: {
-                                        CssImage: 8192
-                                    },
+                                    optimizeImages: false,
+                                    noCompress: true,
+                                    // inlineByRelationType: {
+                                    //     CssImage: 8192
+                                    // },
                                     asyncScripts: true,
                                     stripDebug: true
                                 })
