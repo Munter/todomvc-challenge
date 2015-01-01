@@ -1,7 +1,6 @@
 /*global describe, it, before*/
 
-var path = require('path'),
-    AssetGraph = require('assetgraph-builder'),
+var AssetGraph = require('assetgraph-builder'),
     expect = require('unexpected'),
     learn = JSON.parse(require('fs').readFileSync('learn.json', 'utf8'));
 
