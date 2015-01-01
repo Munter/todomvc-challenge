@@ -55,9 +55,9 @@ Object.keys(learn).forEach(function (key) {
                                 .run(done);
                         });
 
-                        it('Should build without any infos', function () {
-                            expect(assetGraph.infos, 'to be an empty array');
-                        });
+                        // it('Should build without any infos', function () {
+                        //     expect(assetGraph.infos, 'to be an empty array');
+                        // });
 
                         it('Should build without any warnings', function () {
                             expect(assetGraph.warnings, 'to be an empty array');
