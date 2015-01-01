@@ -1,10 +1,8 @@
-/*global describe, it, before, after*/
+/*global describe, it, before*/
 
 var path = require('path'),
-    glob = require('glob'),
-    urlTools = require('../node_modules/assetgraph-builder/node_modules/assetgraph/lib/util/urlTools'),
     AssetGraph = require('assetgraph-builder'),
-    expect = require('expect.js'),
+    expect = require('unexpected'),
     learn = JSON.parse(require('fs').readFileSync('learn.json', 'utf8'));
 
 Object.keys(learn).forEach(function (key) {
@@ -58,15 +56,15 @@ Object.keys(learn).forEach(function (key) {
                         });
 
                         it('Should build without any infos', function () {
-                            expect(assetGraph.infos).to.be.empty();
+                            expect(assetGraph.infos, 'to be an empty array');
                         });
 
                         it('Should build without any warnings', function () {
-                            expect(assetGraph.warnings).to.be.empty();
+                            expect(assetGraph.warnings, 'to be an empty array');
                         });
 
                         it('Should build without any errors', function () {
-                            expect(assetGraph.errors).to.be.empty();
+                            expect(assetGraph.errors, 'to be an empty array');
                         });
                     });
                 }

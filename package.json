@@ -21,9 +21,9 @@
     "url": "https://github.com/Munter/todomvc-challenge/issues"
   },
   "devDependencies": {
-    "assetgraph-builder": "~1.8.2",
-    "mocha": "~1.15.1",
+    "assetgraph-builder": "^2.9.0",
     "glob": "~3.2.7",
-    "expect.js": "~0.2.0"
+    "mocha": "~1.15.1",
+    "unexpected": "^5.1.1"
   }
 }
