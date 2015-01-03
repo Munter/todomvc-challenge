@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "mocha",
+    "travis": "echo 'No automated tests yet'",
     "dalek": "dalek test/dalek-test.js -b chrome"
   },
   "repository": {
